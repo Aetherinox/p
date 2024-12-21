@@ -83,7 +83,7 @@
             }
 
             .container-top {
-                background-color: #840031;
+                background-color: #25c2a0;
                 height: 60px;
                 align-content: center;
                 padding: 0px;
@@ -125,7 +125,7 @@
 
             input[type="text"] {
                 background-color: #171717;
-                border: 1px solid #313131;
+                border: 1px solid #484848;
                 font-weight: 100;
                 padding-top: 5px;
                 padding-bottom: 5px;
@@ -180,6 +180,10 @@
                 padding-bottom: 5px;
             }
 
+            .button-generate:hover {
+                cursor: pointer;
+            }
+
             .button-tags {
                 margin-left: 8px;
                 padding-top: 5px;
@@ -189,6 +193,10 @@
                 color: #FFF;
                 border: 1px solid #f0f0f036;
                 padding-bottom: 5px;
+            }
+
+            .button-tags:hover {
+                cursor: pointer;
             }
 
             .grouping {
@@ -210,11 +218,11 @@
     <body>
         <header>
             <h1>ghcr.io Badge Generator</h1>
-        </header>
-        <main>
             <div class="container-top"> ghcr.io/ <input type="text" id="owner" placeholder="owner" value="keeweb" required> / <input type="text" id="name" placeholder="name" value="keeweb-ghcr" required>
                 <button class="button-generate" type="submit" onclick="do_UpdateImages(undefined)">Generate</button>
             </div>
+        </header>
+        <main>
             <h2>tags</h2>
             <a id="tags-link">
                 <img alt="tags-badge" id="tags" src="data:,">
