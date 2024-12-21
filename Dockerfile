@@ -1,4 +1,4 @@
-FROM python:3.13.0
+FROM python:3.12.6
 
 ARG VERSION
 ENV VERSION=${VERSION:-master}
