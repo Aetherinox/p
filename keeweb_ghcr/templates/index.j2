@@ -56,16 +56,16 @@
                 padding: 0;
                 position: sticky;
                 top: 0;
-                height: 64px;
                 align-content: center;
             }
 
             h1 {
                 font-weight: 100;
                 margin: 0;
+                font-size: 22pt;
             }
 
-            h1, h2 {
+            h2 {
                 font-weight: 400;
             }
 
@@ -82,12 +82,29 @@
                 margin-bottom: 10px
             }
 
+            .container-title {
+                height: 64px;
+                align-content: center;
+            }
+
             .container-top {
-                background-color: #25c2a0;
+                background-color: #970443;
                 height: 60px;
                 align-content: center;
                 padding: 0px;
                 margin: 0px;
+                color: #FFF;
+                font-weight: 400;
+            }
+
+            .container-top .button-generate {
+                background-color: #d4d5d8;
+                color: #000;
+                border-radius: 8px;
+            }
+
+            .container-top input[type="text"] {
+                border: 1px solid #fd529b;
             }
 
             main>div.options>input[type="text"] {
@@ -181,6 +198,8 @@
             }
 
             .button-generate:hover {
+                background-color: #ccc;
+                border-color: #FFF;
                 cursor: pointer;
             }
 
@@ -213,12 +232,18 @@
                 position: absolute;
                 width: 100%;
             }
+
+            footer a {
+                color: #EE115A;
+                text-decoration: none;
+            }
+
         </style>
     </head>
     <body>
         <header>
-            <h1>ghcr.io Badge Generator</h1>
-            <div class="container-top"> ghcr.io/ <input type="text" id="owner" placeholder="owner" value="keeweb" required> / <input type="text" id="name" placeholder="name" value="keeweb-ghcr" required>
+            <div class="container-title"><h1>ghcr.io Badge Generator</h1></div>
+            <div class="container-top"> ghcr.io / <input type="text" id="owner" placeholder="owner" value="keeweb" required> / <input type="text" id="name" placeholder="name" value="keeweb-ghcr" required>
                 <button class="button-generate" type="submit" onclick="do_UpdateImages(undefined)">Generate</button>
             </div>
         </header>
