@@ -42,9 +42,27 @@
         </script>
         <style>
             body {
+                margin: 0;
+                padding: 0;
                 text-align: center;
                 background-color: #202020;
                 color: #FFF;
+                font-family: system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,sans-serif,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+            }
+
+            header {
+                background-color: #0d0d0d;
+                margin: 0;
+                padding: 0;
+                position: sticky;
+                top: 0;
+                height: 64px;
+                align-content: center;
+            }
+
+            h1 {
+                font-weight: 100;
+                margin: 0;
             }
 
             hr {
@@ -52,8 +70,8 @@
                 border-left: 0;
                 border-right: 0;
                 border-top: 0;
-                margin-top: 40px;
-                margin-bottom: 40px;
+                margin-top: 30px;
+                margin-bottom: 30px;
             }
 
             main>h2 {
@@ -62,6 +80,16 @@
 
             main>img {
                 margin-bottom: 10px
+            }
+
+            .container-top {
+                background-color: #222;
+                height: 80px;
+                align-content: center;
+                border-top: 1px dotted #808080;
+                border-bottom: 1px dotted #808080;
+                padding: 0px;
+                margin: 0px;
             }
 
             main>div.options>input[type="text"] {
@@ -122,13 +150,13 @@
                 position: fixed;
                 margin-right: 15px;
                 margin-top: 0px;
+                margin-left: -20px;
             }
 
             input[type="color"]::-moz-color-swatch {
                 border-radius: 20px;
                 border: none;
             }
-
 
             input[type="color"]:focus-visible {
                 border: 1px solid #DF094F;
@@ -142,6 +170,16 @@
             .grouping {
                 height: 45px;
                 align-content: center;
+                padding-top: 20px;
+            }
+
+            footer {
+                background-color: #0f0f0f;
+                padding-top: 20px;
+                padding-bottom: 20px;
+                bottom: 0;
+                position: absolute;
+                width: 100%;
             }
         </style>
     </head>
@@ -196,11 +234,6 @@
         <footer>
             <span>
                 <a href="{{ repo_link }}" target="_blank">keeweb/keeweb-ghcr</a> / v{{ version }}
-            </span>
-            <span>
-                <a href="https://validator.w3.org/nu/?doc=https%3A%2F%2Fkeeweb-ghcr.egpl.dev">
-                    <img alt="w3 valid html 4.01" src="https://raw.githubusercontent.com/bradleytaunt/html5-valid-badge/master/html5-validator-badge.svg">
-                </a>
             </span>
         </footer>
     </body>
