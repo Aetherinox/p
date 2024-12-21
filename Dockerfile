@@ -1,10 +1,9 @@
-FROM python:3
+FROM python:3.13
 
 ARG VERSION
-ENV VERSION=${VERSION:-master}
+ENV VERSION=${VERSION:-main}
 
 RUN pip install --upgrade pip
+RUN python -m pip install git+https://github.com/keeweb/p@$VERSION
 
-RUN python -m pip install git+https://github.com/eggplants/ghcr-badge@${VERSION}
-
-ENTRYPOINT ["ghcr-badge-server"]
+ENTRYPOINT ["keeweb-ghcr-server"]
