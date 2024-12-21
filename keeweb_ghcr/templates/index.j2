@@ -42,6 +42,9 @@
         </script>
         <style>
             body {
+                flex-direction: column;
+                display: flex;
+                min-height: 100vh;
                 margin: 0;
                 padding: 0;
                 text-align: center;
@@ -74,12 +77,25 @@
                 border-left: 0;
                 border-right: 0;
                 border-top: 0;
-                margin-top: 30px;
-                margin-bottom: 30px;
+                margin-top: 40px;
+                margin-bottom: 40px;
+            }
+
+            main {
+                height: 100%;
+                display: flex;
+                flex: 1;
             }
 
             main>img {
                 margin-bottom: 10px
+            }
+
+            .main {
+                flex: content;
+                height: 100%;
+                width: 100vw;
+                margin: auto;
             }
 
             .container-title {
@@ -228,8 +244,6 @@
                 background-color: #0f0f0f;
                 padding-top: 20px;
                 padding-bottom: 20px;
-                bottom: 0;
-                position: absolute;
                 width: 100%;
             }
 
@@ -289,7 +303,7 @@
         </main>
         <footer>
             <span>
-                <a href="{{ repo_link }}" target="_blank">keeweb/keeweb-ghcr</a> / v{{ version }}
+                <a href="{{ repo_link }}" target="_blank">keeweb-ghcr</a> / v{{ version }}
             </span>
         </footer>
     </body>
