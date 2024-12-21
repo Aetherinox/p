@@ -26,7 +26,7 @@
                 const owner = encodeURIComponent(document.getElementById("owner").value);
                 const name = encodeURIComponent(document.getElementById("name").value);
                 if (!(owner || name)) return;
-                const imgElms = document.querySelectorAll("main > a > img");
+                const imgElms = document.querySelectorAll("main > div > a > img");
                 Array.from(imgElms).filter((e) => targetId === undefined || targetId === e.id).forEach((e) => {
                     const url = new URL(`${window.location.origin}/${owner}/${name}/${e.id}`);
                     const optionElms = document.querySelectorAll(`div[id="${e.id}-options"] > input`);
@@ -107,11 +107,11 @@
                 border: 1px solid #fd529b;
             }
 
-            main>div.options>input[type="text"] {
+            main>div>div.options>input[type="text"] {
                 width: 70px
             }
 
-            main>div.options>input[type="number"] {
+            main>div>div.options>input[type="number"] {
                 width: 35px
             }
 
@@ -248,7 +248,7 @@
             </div>
         </header>
         <main>
-            <div>
+            <div class="main">
                 <h2>tags</h2>
                 <a id="tags-link">
                     <img alt="tags-badge" id="tags" src="data:,">
