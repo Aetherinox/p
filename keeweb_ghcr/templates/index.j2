@@ -41,6 +41,11 @@
             window.onload = (_event) => do_UpdateImages(undefined);
         </script>
         <style>
+
+            html {
+                color-scheme: dark;
+            }
+
             body {
                 flex-direction: column;
                 display: flex;
@@ -224,14 +229,17 @@
                 padding-top: 5px;
                 padding-left: 15px;
                 padding-right: 15px;
-                background-color: #99032D;
+                background-color: #c8085a;
                 color: #FFF;
-                border: 1px solid #f0f0f036;
+                border: 1px solid #ce5f8380;
                 padding-bottom: 5px;
+                border-radius: 8px;
             }
 
             .button-tags:hover {
                 cursor: pointer;
+                background-color: #FFF;
+                color: #000;
             }
 
             .grouping {
@@ -252,12 +260,16 @@
                 text-decoration: none;
             }
 
+            footer a:hover {
+                color: #FFF;
+            }
+
         </style>
     </head>
     <body>
         <header>
             <div class="container-title"><h1>ghcr.io Badge Generator</h1></div>
-            <div class="container-top"> ghcr.io / <input type="text" id="owner" placeholder="owner" value="keeweb" required> / <input type="text" id="name" placeholder="name" value="keeweb-ghcr" required>
+            <div class="container-top"> ghcr.io / <input type="text" id="owner" placeholder="owner" value="keeweb" required> / <input type="text" id="name" placeholder="name" value="keeweb" required>
                 <button class="button-generate" type="submit" onclick="do_UpdateImages(undefined)">Generate</button>
             </div>
         </header>
