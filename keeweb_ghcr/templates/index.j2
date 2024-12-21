@@ -77,6 +77,68 @@
                 vertical-align: middle;
             }
 
+            label {
+                padding-left: 20px;
+            }
+
+            input[type="number"] {
+                padding-top: 5px;
+                padding-bottom: 5px;
+                padding-left: 10px;
+                padding-right: 7px;
+                border: 1px solid #313131;
+                background-color: #171717;
+            }
+
+            input[type="number"]:focus-visible {
+                border: 1px solid #DF094F;
+                outline: none;
+            }
+
+            input[type="text"] {
+                background-color: #171717;
+                border: 1px solid #313131;
+                font-weight: 100;
+                padding-top: 5px;
+                padding-bottom: 5px;
+                padding-left: 10px;
+                padding-right: 10px;
+            }
+
+            input[type="text"]:focus-visible {
+                border: 1px solid #DF094F;
+                outline: none;
+            }
+
+            input[type="color"] {
+                -webkit-appearance: none;
+                -moz-appearance: none;
+                appearance: none;
+                background-color: transparent;
+                width: 30px;
+                height: 30px;
+                border: none;
+                cursor: pointer;
+                position: fixed;
+                margin-right: 15px;
+                margin-top: 0px;
+            }
+
+            input[type="color"]::-moz-color-swatch {
+                border-radius: 20px;
+                border: none;
+            }
+
+
+            input[type="color"]:focus-visible {
+                border: 1px solid #DF094F;
+                outline: none;
+            }
+
+            input[type="color"]:hover {
+                cursor: pointer;
+            }
+
             .grouping {
                 height: 45px;
                 align-content: center;
