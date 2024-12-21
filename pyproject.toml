@@ -35,8 +35,8 @@ packages = [
 
 license = "MIT"
 readme = "README.md"
-repository = "https://github.com/keeweb/keeweb-badges-ghcr"
-version = "0.5.0"
+repository = "https://github.com/Aetherinox/p"
+version = "0.5.1"
 
 [tool.poetry.dependencies]
 python = ">=3.8,<3.13"
