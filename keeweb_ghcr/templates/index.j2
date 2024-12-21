@@ -47,6 +47,8 @@
                 color: #FFF;
             }
 
+
+
             hr {
                 border-bottom: 1px dotted rgb(106.5, 106.5, 107);
                 border-left: 0;
@@ -76,6 +78,75 @@
                 display: inline-block;
                 vertical-align: middle;
             }
+
+            label {
+                padding-left: 20px;
+            }
+
+            input[type="number"] {
+                padding-top: 5px;
+                padding-bottom: 5px;
+                padding-left: 10px;
+                padding-right: 7px;
+                border: 1px solid #313131;
+                background-color: #171717;
+            }
+
+            input[type="number"]:focus-visible {
+                border: 1px solid #DF094F;
+                outline: none;
+            }
+
+            input[type="text"] {
+                background-color: #171717;
+                border: 1px solid #313131;
+                font-weight: 100;
+                padding-top: 5px;
+                padding-bottom: 5px;
+                padding-left: 10px;
+                padding-right: 10px;
+            }
+
+            input[type="text"]:focus-visible {
+                border: 1px solid #DF094F;
+                outline: none;
+            }
+
+
+            input[type="color"] {
+                -webkit-appearance: none;
+                -moz-appearance: none;
+                appearance: none;
+                background-color: transparent;
+                width: 30px;
+                height: 30px;
+                border: none;
+                cursor: pointer;
+                position: fixed;
+                margin-right: 15px;
+                margin-top: 0px;
+            }
+
+            input[type="color"]::-moz-color-swatch {
+                border-radius: 20px;
+                border: none;
+            }
+
+
+            input[type="color"]:focus-visible {
+                border: 1px solid #DF094F;
+                outline: none;
+            }
+
+            input[type="color"]:hover {
+                cursor: pointer;
+            }
+
+            #latest_tag-options {
+                height: 45px;
+                align-content: center;
+            }
+
         </style>
     </head>
     <body>
@@ -93,12 +164,11 @@
                 <img alt="tags-badge" id="tags" src="data:,">
             </a>
             <div class="form__group field options" id="tags-options">
-                <label for="tags-color">color:</label>
-                <input type="color" name="color" class="color" id="tags-color" value="#44cc11"> / <label for="tags-ignore">ignore:</label>
-                <input type="text" name="ignore" class="ignore" id="tags-ignore" value="latest"> / <label for="tags-n">n:</label>
-                <input type="number" name="n" class="n" id="tags-n" value="3" min="1"> / <label for="tags-label">label:</label>
-                <input type="text" name="label" class="label" id="tags-label" value="image tags"> / <label for="tags-trim">trim:</label>
-                <input type="text" name="trim" class="trim" id="tags-trim" value="">
+                <input type="color" name="color" class="item-first color" id="tags-color" value="#44cc11"> <label for="tags-ignore">ignore:</label>
+                <input type="text" name="ignore" class="ignore" id="tags-ignore" value="latest"> <label for="tags-n">n:</label>
+                <input type="number" name="n" class="n" id="tags-n" value="3" min="1"> <label for="tags-label">label:</label>
+                <input type="text" name="label" class="label" id="tags-label" value="image tags"> <label for="tags-trim">trim:</label>
+                <input type="text" name="trim" class="item-last trim" id="tags-trim" value="">
                 <button type="submit" onclick="do_UpdateImages('tags')">Apply</button>
             </div>
             <hr>
